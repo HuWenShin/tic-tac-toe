@@ -11,10 +11,21 @@ function gameboard() {
     }
 
     const getBoard = () => board;
-    const dropToken = (row, column, player) => {
-        //cells that don't already have a token
-        const availableCells = #;
+
+
+    const placeToken = (row, column, player) => {
+        if (board[row][column] === 0) {
+            board[row][column] = player;
+        } else {
+            return
+        }
     }
+
+    const printBoard = () => {
+        console.log(board);
+    }
+
+    return { getBoard, placeToken, printBoard };
 }
 
 
@@ -28,20 +39,13 @@ function cell() {
 
     const getValue = () => value;
 
-    return {addToken, getValue};
+    return { addToken, getValue };
 }
-
-// //player name and score
-// function player(name) {
-//     let score = 0;
-
-//     const showScore = () => score;
-//     const winRound = () => score ++;
-
-//     return {name, showScore, winRound};
-// }
 
 
 function gameController() {
-    
+    const playerOne = 1;
+    const playerTwo = 2;
+
+
 }
